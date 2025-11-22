@@ -1088,6 +1088,23 @@
             }
         }
     },
+    "Valve": {
+        "package_info": {
+            "package_id": "Valve",
+            "package_type": "plugin",
+            "display_name": "Valve",
+            "description": "Set a flow limit on the extruder",
+            "package_version": "0.1.0",
+            "sdk_version": "8.6.0",
+            "website": "https://github.com/casperlamboo",
+            "author": {
+                "author_id": "casperlamboo",
+                "display_name": "Casper Lamboo",
+                "email": "casperlamboo@gmail.com",
+                "website": "https://github.com/casperlamboo"
+            }
+        }
+    },
     "GenericABS": {
         "package_info": {
             "package_id": "GenericABS",

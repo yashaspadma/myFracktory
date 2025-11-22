@@ -1,0 +1,15 @@
+{
+  "author": {
+    "author_id": "Casper Lamboo <casperlamboo@gmail.com, casper.lamboo@ultimaker.com>",
+    "display_name": "Friendly Ghost",
+    "website": "https://github.com/casperlamboo/"
+  },
+  "description": "Set a flow limit on the extruder",
+  "display_name": "valve",
+  "package_id": "valve",
+  "package_type": "plugin",
+  "package_version": "0.1.0",
+  "sdk_version": 8,
+  "sdk_version_semver": "8.4.0",
+  "website": "https://github.com/casperlamboo/Valve/"
+}
