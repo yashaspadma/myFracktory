@@ -1105,6 +1105,40 @@
             }
         }
     },
+    "MeasureTool": {
+        "package_info": {
+            "package_id": "MeasureTool",
+            "package_type": "plugin",
+            "display_name": "Measure Tool",
+            "description": "Adds a tool for measuring parts of models",
+            "package_version": "1.2.0",
+            "sdk_version": "8.6.0",
+            "website": "https://github.com/fieldOfView/Cura-MeasureTool",
+            "author": {
+                "author_id": "fieldOfView",
+                "display_name": "fieldOfView",
+                "email": "info@fieldofview.com",
+                "website": "https://github.com/fieldOfView"
+            }
+        }
+    },
+    "SidebarGUIPlugin": {
+        "package_info": {
+            "package_id": "SidebarGUIPlugin",
+            "package_type": "plugin",
+            "display_name": "Sidebar GUI",
+            "description": "Provides an alternative, setting-centric interface based around a fixed sidebar",
+            "package_version": "4.6.9",
+            "sdk_version": "8.6.0",
+            "website": "https://github.com/fieldOfView/Cura-SidebarGUIPlugin",
+            "author": {
+                "author_id": "fieldOfView",
+                "display_name": "fieldOfView",
+                "email": "info@fieldofview.com",
+                "website": "https://github.com/fieldOfView"
+            }
+        }
+    },
     "GenericABS": {
         "package_info": {
             "package_id": "GenericABS",
