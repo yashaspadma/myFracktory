@@ -1835,6 +1835,8 @@ class MachineManager(QObject):
         for word in re.findall(r"[\w']+", machine_type_name):
             if word.lower() == "ultimaker":
                 abbr_machine += "UM"
+            elif word.lower() == "snowflake":
+                abbr_machine += "SF"
             elif word.isdigit():
                 abbr_machine += word
             else:
