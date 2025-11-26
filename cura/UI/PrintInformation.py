@@ -172,6 +172,10 @@ class PrintInformation(QObject):
 
         self._material_amounts = material_amounts
         self._calculateInformation(build_plate_number)
+        
+        # Update job name after slicing to include print time and material weight
+        if build_plate_number == self._active_build_plate:
+            self._updateJobName()
 
     def _updateTotalPrintTimePerFeature(self, build_plate_number: int, print_times_per_feature: Dict[str, int]) -> None:
         total_estimated_time = 0
@@ -322,6 +326,27 @@ class PrintInformation(QObject):
                     self._job_name = self._abbr_machine + "_" + base_name
             else:
                 self._job_name = base_name
+
+        # Add print time and material weight to filename
+        if not self._is_user_specified_job_name:
+            # Get print time in minutes
+            if self._active_build_plate in self._current_print_time:
+                try:
+                    # Get the Duration object and convert to integer seconds
+                    duration_obj = self._current_print_time[self._active_build_plate]
+                    # Duration object can be cast to int to get seconds
+                    total_seconds = int(duration_obj)
+                    if total_seconds > 0:
+                        total_minutes = total_seconds // 60
+                        self._job_name += f"_{total_minutes}min"
+                except (ValueError, AttributeError, TypeError):
+                    pass  # If there's an error, just skip adding print time
+            
+            # Get total material weight in grams
+            if self._active_build_plate in self._material_weights:
+                total_weight = sum(self._material_weights[self._active_build_plate])
+                if total_weight > 0:
+                    self._job_name += f"_{total_weight:.1f}g"
 
         # In case there are several buildplates, a suffix is attached
         if self._multi_build_plate_model.maxBuildPlate > 0:
